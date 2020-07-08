@@ -1,0 +1,140 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "voice vr",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "listHotelsIntent",
+          "slots": [
+            {
+              "name": "location",
+              "type": "AMAZON.Country"
+            },
+            {
+              "name": "place",
+              "type": "place"
+            },
+            {
+              "name": "fromDate",
+              "type": "AMAZON.DATE"
+            },
+            {
+              "name": "toDate",
+              "type": "AMAZON.DATE"
+            }
+          ],
+          "samples": [
+            "list vacation rentals in {place} during dates {fromDate} to {toDate}",
+            "{place} {fromDate} to {toDate}",
+            "list hotels in {place} during dates {fromDate} to {toDate}",
+            "list hotels in {place}",
+            "list",
+            "show",
+            "show hotels in {location}",
+            "show hotels",
+            "show me the list",
+            "list hotel",
+            "List hotels"
+          ]
+        },
+        {
+          "name": "HotelDetailIntentHandler",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "hotelName",
+              "type": "hotelname"
+            }
+          ],
+          "samples": [
+            "select  {hotelName}",
+            "find details for {hotelName}",
+            "select the {hotelName}",
+            "number {number}",
+            "select hotel {number}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "saint louis"
+              }
+            },
+            {
+              "name": {
+                "value": "detroit"
+              }
+            },
+            {
+              "name": {
+                "value": "kansas city"
+              }
+            },
+            {
+              "name": {
+                "value": "Las Vegas"
+              }
+            },
+            {
+              "name": {
+                "value": "Chicago"
+              }
+            },
+            {
+              "name": {
+                "value": "seattle"
+              }
+            }
+          ],
+          "name": "place"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "mariott"
+              }
+            }
+          ],
+          "name": "hotelname"
+        }
+      ]
+    }
+  },
+  "version": "8"
+}
